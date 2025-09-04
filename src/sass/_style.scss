@@ -17,6 +17,40 @@ $white: #ffffff;
 $primary-red: #d32f2f;
 $primary-red-dark: #b71c1c;
 $primary-red-light: #ffcdd2;
+$primary-blue: #1877f2;
+
+
+.text-primary-red {
+  color: $primary-red !important;
+}
+
+.text-primary-red-dark {
+  color: $primary-red-dark !important;
+}
+
+.text-primary-red-light {
+  color: $primary-red-light !important;
+}
+
+.text-primary-blue {
+  color: $primary-blue !important;
+}
+
+.bg-primary-red {
+  background-color: $primary-red !important;
+}
+
+.bg-primary-red-dark {
+  background-color: $primary-red-dark !important;
+}
+
+.bg-primary-red-light {
+  background-color: $primary-red-light !important;
+}
+
+.bg-primary-blue {
+  background-color: $primary-blue !important;
+}
 
 // social platforms
 $facebook-blue: #1877f2;
