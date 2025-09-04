@@ -6,7 +6,7 @@ import classNames from "classnames";
 import PropTypes from "prop-types";
 import MediaQuery from "react-responsive";
 
-import { DefaultLargeLayout, DefaultMediumLayout, DefaultSmallLayout, DefaultResponsiveLayout } from "./components/default-layout";
+import { DefaultLargeLayout, DefaultMediumLayout, DefaultSmallLayout } from "./components/default-layout";
 import {
   ImageExtraSmallLayout,
   ImageLargeLayout,
@@ -41,30 +41,18 @@ const BaseContainer = ({ children, showWelcomeBanner, fullName }) => {
   return (
     <div style={{ background: "linear-gradient(135deg, #FFCDD2 0%, #ffffff 50%, #FFCDD2 100%)", minHeight: "100vh" }}>
       {/* <div className="col-md-12 extra-large-screen-top-stripe" /> */}
-      <div className="row mx-0 align-items-center justify-content-between w-100">
-        <div className={classNames(
-          "col-12 col-lg-7",
-          "order-2 order-lg-1"
-        )}>
-          <div className={classNames("w-100 content items-center mt-0", { "": showWelcomeBanner })}>
-            {children}
-          </div>
-        </div>
-
-        <div className="col-12 col-lg-5 order-1 order-lg-2 p-0">
-          <MediaQuery maxWidth={breakpoints.small.maxWidth - 1}>
-            {showWelcomeBanner ? <AuthSmallLayout fullName={fullName} /> : <DefaultResponsiveLayout />}
-          </MediaQuery>
-          <MediaQuery minWidth={breakpoints.medium.minWidth} maxWidth={breakpoints.large.maxWidth - 1}>
-            {showWelcomeBanner ? <AuthMediumLayout fullName={fullName} /> : <DefaultResponsiveLayout />}
-          </MediaQuery>
-          <MediaQuery minWidth={breakpoints.extraLarge.minWidth}>
-            {showWelcomeBanner ? <AuthLargeLayout fullName={fullName} /> : <DefaultResponsiveLayout />}
-          </MediaQuery>
-        </div>
+      <div className="layout">
+        <MediaQuery maxWidth={breakpoints.small.maxWidth - 1}>
+          {showWelcomeBanner ? <AuthSmallLayout fullName={fullName} /> : <DefaultSmallLayout />}
+        </MediaQuery>
+        <MediaQuery minWidth={breakpoints.medium.minWidth} maxWidth={breakpoints.large.maxWidth - 1}>
+          {showWelcomeBanner ? <AuthMediumLayout fullName={fullName} /> : <DefaultMediumLayout />}
+        </MediaQuery>
+        <MediaQuery minWidth={breakpoints.extraLarge.minWidth}>
+          {showWelcomeBanner ? <AuthLargeLayout fullName={fullName} /> : <DefaultLargeLayout />}
+        </MediaQuery>
+        <div className={classNames("content", { "align-items-center mt-0": showWelcomeBanner })}>{children}</div>
       </div>
-
-
     </div>
   );
 };

@@ -57,3 +57,22 @@
     font-weight: 500;
   }
 }
+
+.logo-responsive {
+  max-height: 80px;
+  object-fit: contain;
+  width: 100%;
+}
+.right-banner{
+  min-height: auto;
+}
+
+@media (min-width: 992px) {
+  .logo-responsive {
+    max-height: 100px;
+  }
+  .right-banner{
+    min-height: 100vh;
+  }
+}
+
