@@ -14,7 +14,7 @@ import { ChevronLeft } from '@openedx/paragon/icons';
 import PropTypes from 'prop-types';
 import { Navigate, useNavigate } from 'react-router-dom';
 
-import BaseContainer from '../base-container';
+import LoginContainer from '../base-container/LoginContainer';
 import { clearThirdPartyAuthContextErrorMessage } from '../common-components/data/actions';
 import {
   tpaProvidersSelector,
@@ -28,6 +28,7 @@ import { LoginPage } from '../login';
 import { backupLoginForm } from '../login/data/actions';
 import { RegistrationPage } from '../register';
 import { backupRegistrationForm } from '../register/data/actions';
+import { CustomTabs, CustomTab } from '../common-components/CustomTabs';
 
 const Logistration = (props) => {
   const { selectedPage, tpaProviders } = props;
@@ -97,7 +98,7 @@ const Logistration = (props) => {
   };
 
   return (
-    <BaseContainer>
+    <LoginContainer>
       <div>
         {disablePublicAccountCreation
           ? (
@@ -116,7 +117,11 @@ const Logistration = (props) => {
             </>
           )
           : (
-            <div>
+            <div className='bg-white border-gray-50 rounded-xl shadow-md p-1'>
+              <div className="my-4 mx-10">
+                {/* {formatMessage(messages[selectedPage === LOGIN_PAGE ? 'logistration.sign.in' : 'logistration.register'])} */}
+                Welcome to <span class="text-primary-red font-semibold">DUY TAN University</span>
+              </div>
               {institutionLogin
                 ? (
                   <Tabs defaultActiveKey="" id="controlled-tab" onSelect={handleInstitutionLogin}>
@@ -124,20 +129,15 @@ const Logistration = (props) => {
                   </Tabs>
                 )
                 : (!isValidTpaHint() && !hideRegistrationLink && (
-                  <Tabs defaultActiveKey={selectedPage} id="controlled-tab" onSelect={(tabKey) => handleOnSelect(tabKey, selectedPage)}>
-                    <Tab title={formatMessage(messages['logistration.register'])} eventKey={REGISTER_PAGE} />
-                    <Tab title={formatMessage(messages['logistration.sign.in'])} eventKey={LOGIN_PAGE} />
-                  </Tabs>
+                  <CustomTabs className={'my-4 mx-8'} defaultActiveKey={selectedPage} id="controlled-tab" activeKey={selectedPage} onSelect={(tabKey) => handleOnSelect(tabKey, selectedPage)}>
+                    <CustomTab title={formatMessage(messages['logistration.register'])} eventKey={REGISTER_PAGE} />
+                    <CustomTab title={formatMessage(messages['logistration.sign.in'])} eventKey={LOGIN_PAGE} />
+                  </CustomTabs>
                 ))}
-              { key && (
+              {key && (
                 <Navigate to={updatePathWithQueryParams(key)} replace />
               )}
               <div id="main-content" className="main-content">
-                {!institutionLogin && !isValidTpaHint() && hideRegistrationLink && (
-                  <h3 className="mb-4.5">
-                    {formatMessage(messages[selectedPage === LOGIN_PAGE ? 'logistration.sign.in' : 'logistration.register'])}
-                  </h3>
-                )}
                 {selectedPage === LOGIN_PAGE
                   ? <LoginPage institutionLogin={institutionLogin} handleInstitutionLogin={handleInstitutionLogin} />
                   : (
@@ -150,7 +150,7 @@ const Logistration = (props) => {
             </div>
           )}
       </div>
-    </BaseContainer>
+    </LoginContainer>
   );
 };
 

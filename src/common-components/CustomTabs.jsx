@@ -11,7 +11,6 @@ const CustomTabs = ({ activeKey, onSelect, children, className }) => {
 
           const { eventKey, title } = child.props;
           const isActive = eventKey === activeKey;
-
           return (
             <li className="custom-nav-item" key={eventKey || index}>
               <button

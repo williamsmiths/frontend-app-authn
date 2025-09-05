@@ -10,18 +10,16 @@ const ResponsiveLayout = () => {
   const { formatMessage } = useIntl();
 
   return (
-    <div className="d-flex flex-column justify-content-center align-items-center text-center bg-white min-vh-100 py-4">
-      
-      <Hyperlink destination={getConfig().MARKETING_SITE_BASE_URL}>
-        <Image
-          alt={getConfig().SITE_NAME}
-          src={LOGO_DTU}
-          className="mb-4 img-fluid"
-          style={{ maxHeight: "386px", objectFit: "contain" }}
-        />
-      </Hyperlink>
+    <div
+      className="right-banner d-flex flex-column justify-content-center align-items-center text-center bg-white"
+    >
+      <Image
+        alt="Logo"
+        src={LOGO_DTU}
+        className="mt-4 logo-responsive px-5"
+      />
 
-      <h1 className="fw-bold mb-4 text-primary">
+      <h1 className="fw-bold my-4 text-primary-blue">
         {formatMessage(messages["start.learning"])}{" "}
         <span className="text-danger">
           {formatMessage(messages["with.site.name"], {
@@ -33,10 +31,10 @@ const ResponsiveLayout = () => {
       <Image
         alt="Learning Illustration"
         src={HERO_IMG}
-        className="img-fluid d-none d-lg-block"
-        style={{ maxWidth: "100%", height: "auto" }}
+        className="d-none d-lg-block"
+        style={{ maxWidth: "80%", height: "auto" }}
       />
-      
+
     </div>
   );
 };
