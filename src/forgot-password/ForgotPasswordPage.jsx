@@ -21,7 +21,8 @@ import { forgotPassword, setForgotPasswordFormData } from './data/actions';
 import { forgotPasswordResultSelector } from './data/selectors';
 import ForgotPasswordAlert from './ForgotPasswordAlert';
 import messages from './messages';
-import BaseContainer from '../base-container';
+import LoginContainer from '../base-container/LoginContainer';
+import { CustomTabs, CustomTab } from '../common-components/CustomTabs';
 import { FormGroup } from '../common-components';
 import { DEFAULT_STATE, LOGIN_PAGE, VALID_EMAIL_REGEX } from '../data/constants';
 import { updatePathWithQueryParams, windowScrollTo } from '../data/utils';
@@ -95,13 +96,13 @@ const ForgotPasswordPage = (props) => {
   );
 
   return (
-    <BaseContainer>
+    <LoginContainer>
       <Helmet>
         <title>{formatMessage(messages['forgot.password.page.title'],
           { siteName: getConfig().SITE_NAME })}
         </title>
       </Helmet>
-      <div>
+      <div className='bg-white border-gray-50 rounded-xl shadow-md p-1'>
         <Tabs activeKey="" id="controlled-tab" onSelect={(key) => navigate(updatePathWithQueryParams(key))}>
           <Tab title={tabTitle} eventKey={LOGIN_PAGE} />
         </Tabs>
@@ -160,7 +161,7 @@ const ForgotPasswordPage = (props) => {
           </Form>
         </div>
       </div>
-    </BaseContainer>
+    </LoginContainer>
   );
 };
 
