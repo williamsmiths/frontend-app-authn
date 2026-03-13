@@ -2,7 +2,7 @@ import React from "react";
 import { getConfig } from "@edx/frontend-platform";
 import { useIntl } from "@edx/frontend-platform/i18n";
 import { Hyperlink, Image } from "@openedx/paragon";
-import LOGO_DTU from "../../../assets/images/logo-dtu.png";
+import LOGO_CT from "../../../assets/images/logo-ct.png";
 import HERO_IMG from "../../../assets/images/educational-banner.png";
 import messages from "./messages";
 
@@ -15,13 +15,13 @@ const ResponsiveLayout = () => {
     >
       <Image
         alt="Logo"
-        src={LOGO_DTU}
+        src={LOGO_CT}
         className="mt-4 logo-responsive px-5"
       />
 
-      <h1 className="fw-bold my-4 text-primary-blue">
+      <h1 className="fw-bold my-4 text-gray-700">
         {formatMessage(messages["start.learning"])}{" "}
-        <span className="text-danger">
+        <span className="text-primary-blue" >
           {formatMessage(messages["with.site.name"], {
             siteName: getConfig().SITE_NAME,
           })}

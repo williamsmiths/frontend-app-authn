@@ -14,11 +14,11 @@
 $white: #ffffff;
 
 // Primary colors theme
-$primary: #d32f2f;
-$primary-red: #d32f2f;
-$primary-red-dark: #b71c1c;
-$primary-red-light: #ffcdd2;
-$primary-blue: #0065FD;
+$primary: #04549F;
+$primary-red: #04549F;
+$primary-red-dark: #04549F;
+$primary-red-light: #cddfff;
+$primary-blue: #04549F;
 $gray-100: #F3F4F6;
 
 
@@ -69,7 +69,7 @@ $elevation-level-2-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.15);
 // Global body styling
 body {
   font-family: "Inter", "Segoe UI", "Roboto", sans-serif;
-  background: linear-gradient(135deg, #ffcdd2 0%, #ffffff 50%, #ffcdd2 100%);
+  background: linear-gradient(135deg, #cddfff 0%, #ffffff 50%, #cddfff 100%);
   min-height: 100vh;
 }
 
@@ -79,7 +79,7 @@ body {
 
   &:hover {
     transform: translateY(-4px);
-    box-shadow: 0 20px 60px rgba(211, 47, 47, 0.2);
+    box-shadow: 0 20px 60px rgba(47, 85, 211, 0.2);
   }
 }
 
@@ -186,7 +186,7 @@ body {
 .auth-card {
   background: rgba(255, 255, 255, 0.95);
   border-radius: 16px;
-  box-shadow: 0 12px 40px rgba(211, 47, 47, 0.15);
+  box-shadow: 0 12px 40px rrgba(47, 99, 211, 0.3);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(211, 47, 47, 0.1);
   overflow: hidden;
@@ -209,7 +209,7 @@ body {
   min-width: 464px !important;
   // background: rgba(255, 255, 255, 0.95);
   // border-radius: 16px;
-  // box-shadow: 0 12px 40px rgba(211, 47, 47, 0.15);
+  // box-shadow: 0 12px 40px rrgba(47, 99, 211, 0.3);
   // backdrop-filter: blur(10px);
   // border: 1px solid rgba(211, 47, 47, 0.1);
   padding: 2rem;
@@ -221,7 +221,7 @@ body {
   min-width: 464px !important;
   background: rgba(255, 255, 255, 0.95);
   border-radius: 16px;
-  box-shadow: 0 12px 40px rgba(211, 47, 47, 0.15);
+  box-shadow: 0 12px 40px rrgba(47, 99, 211, 0.3);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(211, 47, 47, 0.1);
   padding: 2rem;
@@ -272,17 +272,17 @@ body {
   font-size: 0.875rem;
   line-height: 1.5;
   height: 2.75rem;
-  border: 2px solid rgba(211, 47, 47, 0.2);
+  border: 2px solid rgba(47, 85, 211, 0.2);
   border-radius: 8px;
   transition: all 0.3s ease;
 
   &:focus {
     border-color: $primary-red;
-    box-shadow: 0 0 0 0.2rem rgba(211, 47, 47, 0.25);
+    box-shadow: 0 0 0 0.2rem rgba(47, 85, 211, 0.2);
   }
 
   &:hover {
-    border-color: rgba(211, 47, 47, 0.4);
+    border-color: rgba(47, 99, 211, 0.3);
   }
 }
 
@@ -324,24 +324,24 @@ body {
   font-weight: 600;
   color: $white;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(211, 47, 47, 0.3);
+    box-shadow: 0 4px 12px rgba(47, 99, 211, 0.3);
 
   &:hover {
     background: linear-gradient(135deg, $primary-red-dark 0%, $primary-red 100%);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(211, 47, 47, 0.4);
+    box-shadow: 0 6px 20px rgba(47, 99, 211, 0.3);
     color: $white;
   }
 
   &:focus {
     outline: none;
-    box-shadow: 0 0 0 0.2rem rgba(211, 47, 47, 0.5);
+    box-shadow: 0 0 0 0.2rem rgba(47, 99, 211, 0.3);;
     color: $white;
   }
 
   &:active {
     transform: translateY(0);
-    box-shadow: 0 2px 8px rgba(211, 47, 47, 0.3);
+    box-shadow: 0 2px 8px rgba(47, 99, 211, 0.3);
   }
 }
 

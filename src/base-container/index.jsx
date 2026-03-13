@@ -39,7 +39,7 @@ const BaseContainer = ({ children, showWelcomeBanner, fullName }) => {
   }
 
   return (
-    <div style={{ background: "linear-gradient(135deg, #FFCDD2 0%, #ffffff 50%, #FFCDD2 100%)", minHeight: "100vh" }}>
+    <div style={{ background: "linear-gradient(135deg, #cddfff 0%, #ffffff 50%, #cddfff 100%)", minHeight: "100vh" }}>
       {/* <div className="col-md-12 extra-large-screen-top-stripe" /> */}
       <div className="layout">
         <MediaQuery maxWidth={breakpoints.small.maxWidth - 1}>

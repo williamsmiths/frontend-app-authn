@@ -12,9 +12,9 @@ const MediumLayout = ({ fullName }) => {
 
   return (
     <>
-      <div className="w-100" style={{ height: "4px", background: "linear-gradient(to right, #D32F2F, #B71C1C)" }} />
+      <div className="w-100" style={{ height: "4px", background: "linear-gradient(to right, #2f4dd3, #B71C1C)" }} />
       <div className="w-100 p-0 mb-3 d-flex">
-        <div className="col-md-10" style={{ background: "linear-gradient(135deg, #D32F2F 0%, #B71C1C 100%)" }}>
+        <div className="col-md-10" style={{ background: "linear-gradient(135deg, #2f4dd3 0%, #B71C1C 100%)" }}>
           <Hyperlink destination={getConfig().MARKETING_SITE_BASE_URL}>
             <Image className="logo" alt={getConfig().SITE_NAME} src={getConfig().LOGO_WHITE_URL} />
           </Hyperlink>
@@ -28,7 +28,7 @@ const MediumLayout = ({ fullName }) => {
               </h1>
               <h2 className="h5 text-white mt-3" style={{ opacity: 0.9 }}>
                 {formatMessage(messages["complete.your.profile.1"])}
-                <div className="text-white mt-2" style={{ color: "#FFCDD2" }}>
+                <div className="text-white mt-2" style={{ color: "#cddfff" }}>
                   {formatMessage(messages["complete.your.profile.2"])}
                 </div>
               </h2>
@@ -36,7 +36,7 @@ const MediumLayout = ({ fullName }) => {
           </div>
         </div>
         <div className="col-md-2 bg-white p-0">
-          <svg className="w-100 h-100" preserveAspectRatio="xMaxYMin meet" style={{ fill: "#FFCDD2" }}>
+          <svg className="w-100 h-100" preserveAspectRatio="xMaxYMin meet" style={{ fill: "#cddfff" }}>
             <g transform="skewX(168)">
               <rect x="0" y="0" height="100%" width="100%" />
             </g>

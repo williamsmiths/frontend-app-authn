@@ -3,7 +3,7 @@ import classNames from "classnames";
 import PropTypes from "prop-types";
 
 import { DefaultResponsiveLayout } from "./components/default-layout";
-import bgLogin from "../assets/images/bg-authn.png";
+// import bgLogin from "../assets/images/bg-authn.png";
 
 const LoginContainer = ({ children, showWelcomeBanner, fullName }) => {
 
@@ -18,10 +18,10 @@ const LoginContainer = ({ children, showWelcomeBanner, fullName }) => {
             "d-flex align-items-center justify-content-center"
           )}
           style={{
-            backgroundImage: `url(${bgLogin})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
+            // backgroundImage: `url(${bgLogin})`,
+            // backgroundSize: "cover",
+            // backgroundPosition: "center",
+            // backgroundRepeat: "no-repeat",
             flexGrow: 1,
           }}
         >

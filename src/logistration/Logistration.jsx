@@ -120,7 +120,7 @@ const Logistration = (props) => {
             <div className='bg-white border-gray-50 rounded-xl shadow-md p-1'>
               <div className="my-4 mx-10">
                 {/* {formatMessage(messages[selectedPage === LOGIN_PAGE ? 'logistration.sign.in' : 'logistration.register'])} */}
-                Welcome to <span class="text-primary-red font-semibold">DUY TAN University</span>
+                Chào mừng đến với <span class="text-primary-red font-semibold">TRƯỜNG ĐẠI HỌC CÔNG THƯƠNG</span>
               </div>
               {institutionLogin
                 ? (

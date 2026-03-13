@@ -11,8 +11,8 @@ const SmallLayout = ({ fullName }) => {
   const { formatMessage } = useIntl();
 
   return (
-    <div className="min-vw-100" style={{ background: "linear-gradient(135deg, #D32F2F 0%, #B71C1C 100%)" }}>
-      <div className="col-md-12" style={{ height: "4px", background: "linear-gradient(to right, #B71C1C, #D32F2F)" }} />
+    <div className="min-vw-100" style={{ background: "linear-gradient(135deg, #2f4dd3 0%, #B71C1C 100%)" }}>
+      <div className="col-md-12" style={{ height: "4px", background: "linear-gradient(to right, #B71C1C, #2f4dd3)" }} />
       <Hyperlink destination={getConfig().MARKETING_SITE_BASE_URL}>
         <Image className="logo-small" alt={getConfig().SITE_NAME} src={getConfig().LOGO_WHITE_URL} />
       </Hyperlink>
@@ -26,7 +26,7 @@ const SmallLayout = ({ fullName }) => {
           </h1>
           <h2 className="h6 text-white mt-3" style={{ opacity: 0.9 }}>
             {formatMessage(messages["complete.your.profile.1"])}
-            <div className="text-white mt-2" style={{ color: "#FFCDD2" }}>
+            <div className="text-white mt-2" style={{ color: "#cddfff" }}>
               {formatMessage(messages["complete.your.profile.2"])}
             </div>
           </h2>

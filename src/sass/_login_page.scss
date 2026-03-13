@@ -5,7 +5,7 @@
 
 // Login page specific styles
 .login-container {
-  background: linear-gradient(135deg, #ffcdd2 0%, #ffffff 50%, #ffcdd2 100%);
+  background: linear-gradient(135deg, #cddfff 0%, #ffffff 50%, #cddfff 100%);
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -16,7 +16,7 @@
   background: rgba(255, 255, 255, 0.95);
   border-radius: 16px;
   padding: 2rem;
-  box-shadow: 0 12px 40px rgba(211, 47, 47, 0.15);
+  box-shadow: 0 12px 40px rrgba(47, 99, 211, 0.3);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(211, 47, 47, 0.1);
 }
@@ -26,7 +26,7 @@
   margin-bottom: 2rem;
 
   h1 {
-    color: #d32f2f;
+    color: #2f4dd3;
     font-weight: 700;
     font-size: 2rem;
     margin-bottom: 0.5rem;
@@ -48,12 +48,12 @@
     content: "";
     flex: 1;
     height: 1px;
-    background: linear-gradient(to right, transparent, #d32f2f, transparent);
+    background: linear-gradient(to right, transparent, #2f4dd3, transparent);
   }
 
   span {
     padding: 0 1rem;
-    color: #d32f2f;
+    color: #2f4dd3;
     font-weight: 500;
   }
 }

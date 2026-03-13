@@ -11,8 +11,8 @@ const SmallLayout = () => {
   const { formatMessage } = useIntl();
 
   return (
-    <span className="w-100" style={{ background: "linear-gradient(135deg, #D32F2F 0%, #B71C1C 100%)" }}>
-      <div className="col-md-12" style={{ height: "4px", background: "linear-gradient(to right, #B71C1C, #D32F2F)" }} />
+    <span className="w-100" style={{ background: "linear-gradient(135deg, #2f4dd3 0%, #B71C1C 100%)" }}>
+      <div className="col-md-12" style={{ height: "4px", background: "linear-gradient(to right, #B71C1C, #2f4dd3)" }} />
       <div>
         <Hyperlink destination={getConfig().MARKETING_SITE_BASE_URL}>
           <Image className="logo-small" alt={getConfig().SITE_NAME} src={getConfig().LOGO_WHITE_URL} />
@@ -25,7 +25,7 @@ const SmallLayout = () => {
             >
               <span>
                 {formatMessage(messages["start.learning"])}{" "}
-                <span className="text-white d-inline-block mt-2" style={{ color: "#FFCDD2" }}>
+                <span className="text-white d-inline-block mt-2" style={{ color: "#cddfff" }}>
                   {formatMessage(messages["with.site.name"], { siteName: getConfig().SITE_NAME })}
                 </span>
               </span>
